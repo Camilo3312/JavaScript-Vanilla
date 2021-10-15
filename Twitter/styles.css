@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background: #4d6eff;
+    color: #FFF;
+
+    padding: 10px;
+}
+
+.profile {
+    max-width: 400px;
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#img_profile {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #0231ff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* form */
+
+.conatiner_form {
+    max-width: 400px;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input_txt {
+    padding: 15px;
+    border: none;
+    border: 1px solid #4d6eff;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.input_txt::placeholder {
+    color: #4d6eff;
+}
+
+.input_txt:focus {
+    outline: 3px solid #95a9ff;
+    transition: all 50ms;
+}
+
+.input_btn {
+    padding: 15px;
+    border: none;
+    margin: 10px 0;
+    font-size: 15px;
+    background: #4d6eff;
+    color: #FFF;
+    outline: none;
+}
+
+#cont {
+    font-size: 13px;
+    color: #7e7e7e;
+}
+
+#message_error {
+    margin: 5px 0;
+    color: #4d6eff;
+    font-size: 15px;
+}
+
+.error:focus {
+    outline: 3px solid #ff7070;
+    transition: all 50ms;
+}
+
+/* messages */
+
+#container_twitts {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.comment {
+    padding: 20px;
+    margin: 10px 0;
+    background: #f1f1f1;
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all ease 150ms;
+}
+
+.container_swicth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 4em;
+}
+
+.title::selection {
+    background: transparent;
+}
+
+.btn {
+    font-size: 4em;
+}
+
+.dark {
+    background: #1D1D1D;
+    color: #FFFF;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
