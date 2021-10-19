@@ -13,8 +13,13 @@ date_birthday.addEventListener('change', function(){
             conatiner_message.style.background = '#ff3939';
 
         } else {
+	    if(calculateAge() >= 18) {
+		conatiner_message.style.background = '#1a9c00';
+	    } else {
+		conatiner_message.style.background = 'red';
+	    }
             message.textContent = `Hola ${txt_name.value} su edad es de ${calculateAge()} años`;
-            conatiner_message.style.background = '#1a9c00';
+            
         }
     }
 });
