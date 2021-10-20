@@ -6,17 +6,18 @@ const btn_create_card = document.querySelector('#btn_create_card');
 const container_input = document.querySelector('.container_input');
 const h1username = document.querySelector('.username'); 
 
+
 const regExpresions = {
     username: /^[a-zA-Z]{4,16}$/
 };
 
-const validateForm = (input, expresion) => {
+const validateDate = (input, expresion) => {
     const validate = expresion.test(input);
     return validate;
 };
 
-txt_username.addEventListener('keyup', () => {
-    let response = validateForm(txt_username.value, regExpresions.username);
+const validateForm = () => {
+    let response = validateDate(txt_username.value, regExpresions.username);
     if(response) {
         icon.classList.add('fa-check-circle');
         icon.classList.remove('fa-times-circle');
@@ -31,15 +32,15 @@ txt_username.addEventListener('keyup', () => {
         txt_username.classList.remove('correct');
         message.textContent = 'Usuario incorrecto';
     }
-})
+};
+
+txt_username.addEventListener('keyup', validateForm)
 
 btn_create_card.addEventListener('click', () => {
-    let response = validateForm(txt_username.value, regExpresions.username);
+    validateForm();
+    let response = validateDate(txt_username.value, regExpresions.username);
     if(response){
         container_card.classList.remove('ocult');
         h1username.textContent = `${txt_username.value}`;
     }
 });
-
-
-

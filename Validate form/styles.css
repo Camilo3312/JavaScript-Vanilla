@@ -13,6 +13,7 @@ body {
 
 .container {
     display: flex;
+    justify-content: center;
 }
 
 .container_form {
@@ -113,6 +114,7 @@ body {
 
     display: flex;
     justify-content: center;
+    animation: backgroundanimate 3s infinite;
 }
 
 .profile {
