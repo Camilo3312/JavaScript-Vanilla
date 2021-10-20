@@ -50,7 +50,7 @@ body {
 }
 
 .incorrect {
-    border: 2px solid #770000;
+    border: 2px solid #960000;
 }
 
 .icon_user {
@@ -68,15 +68,15 @@ body {
 
 .fa-times-circle {
     font-size: 20px;
-    color: #770000;
+    color: #960000;
     position: relative;
     right: 30px;
 }
 
 .message {
-    color: #770000;
-    font-size: 16px;
-    font-weight: 700;
+    color: #960000;
+    font-size: 14px;
+    /* font-weight: 700; */
 }
 
 #btn_create_card {
@@ -114,7 +114,6 @@ body {
 
     display: flex;
     justify-content: center;
-    animation: backgroundanimate 3s infinite;
 }
 
 .profile {

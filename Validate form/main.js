@@ -17,20 +17,20 @@ const validateDate = (input, expresion) => {
 };
 
 const validateForm = () => {
-    let response = validateDate(txt_username.value, regExpresions.username);
+    const response = validateDate(txt_username.value, regExpresions.username);
     if(response) {
-        icon.classList.add('fa-check-circle');
-        icon.classList.remove('fa-times-circle');
+        // icon.classList.add('fa-check-circle');
+        // icon.classList.remove('fa-times-circle');
         txt_username.classList.add('correct');
         txt_username.classList.remove('incorrect');
         message.textContent = '';
     }
     else {
-        icon.classList.add('fa-times-circle');
-        icon.classList.remove('fa-check-circle');
+        // icon.classList.add('fa-times-circle');
+        // icon.classList.remove('fa-check-circle');
         txt_username.classList.add('incorrect');
         txt_username.classList.remove('correct');
-        message.textContent = 'Usuario incorrecto';
+        message.textContent = 'El usuario debe tener minimo 4 caracteres';
     }
 };
 
@@ -38,7 +38,7 @@ txt_username.addEventListener('keyup', validateForm)
 
 btn_create_card.addEventListener('click', () => {
     validateForm();
-    let response = validateDate(txt_username.value, regExpresions.username);
+    const response = validateDate(txt_username.value, regExpresions.username);
     if(response){
         container_card.classList.remove('ocult');
         h1username.textContent = `${txt_username.value}`;
