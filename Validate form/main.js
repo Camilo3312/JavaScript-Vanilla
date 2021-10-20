@@ -23,6 +23,7 @@ const validateForm = () => {
         // icon.classList.remove('fa-times-circle');
         txt_username.classList.add('correct');
         txt_username.classList.remove('incorrect');
+        btn_create_card.style.opacity = '1';
         message.textContent = '';
     }
     else {
@@ -30,6 +31,7 @@ const validateForm = () => {
         // icon.classList.remove('fa-check-circle');
         txt_username.classList.add('incorrect');
         txt_username.classList.remove('correct');
+        btn_create_card.style.opacity = '0.5';
         message.textContent = 'El usuario debe tener minimo 4 caracteres';
     }
 };
