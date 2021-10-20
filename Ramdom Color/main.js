@@ -38,10 +38,6 @@ function ramdomColor() {
     return color; 
 }
 
-function changeColor(color) {
-    container_color.style.background = color;
-}
-
 // Method to copy clipboard
 function copy(){
 
