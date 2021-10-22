@@ -82,8 +82,13 @@ function renderCart() {
 
         const items = products.filter((item_products) => {                        
             return item_products.id === parseInt(item);
-        });    
+        });
 
+        const num_products = carrito.reduce((total, id_product) => {                
+            return id_product === item ? total += 1 : total;
+        }, 0);  
+
+        console.log(num_products);
         const card_product = document.createElement('div');
         const image_prduct = document.createElement('img');
         const name = document.createElement('p');
@@ -100,7 +105,7 @@ function renderCart() {
         image_prduct.setAttribute('src', items[0].image);
         name.textContent = items[0].name;
         price.textContent = items[0].price;
-        cuanty.textContent = carrito.length;
+        cuanty.textContent = num_products;
         btn_add.textContent = '+';
         btn_add.setAttribute('marcador', items[0].id);
         btn_remove.textContent = '-';
