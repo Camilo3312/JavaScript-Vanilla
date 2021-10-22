@@ -4,25 +4,25 @@ const products = [
         id: 1,
         name: 'Arroz',
         price: 2000,
-        image: 'arroz.webp'
+        image: 'images/arroz.webp'
     },
     {
         id: 2,
         name: 'frijoles',
         price: 2200,
-        image: 'frijol.jpg'
+        image: 'images/frijol.jpg'
     },
     {
         id: 3,
         name: 'Garvanzos',
         price: 2000,
-        image: 'garbanzos.jpg'
+        image: 'images/garbanzos.jpg'
     },
     {
         id: 4,
         name: 'Alverjas',
         price: 2200,
-        image: 'alverja.jpg'
+        image: 'images/alverja.jpg'
     }
 ];
 
@@ -150,7 +150,7 @@ function remove(e) {
     let index = carrito.indexOf(id);
     console.log(carrito);
     console.log(index);
-    carrito.splice(index,1)
+    carrito.splice(index, 1)
     renderCart()
 }
 

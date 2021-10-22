@@ -37,7 +37,7 @@ header {
 
 .container_banner {
     height: 400px;
-    background-image: url(banner.jpg);
+    background-image: url(../images/banner.jpg);
     background-size: cover;
 
     display: flex;
