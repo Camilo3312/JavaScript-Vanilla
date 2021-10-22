@@ -76,16 +76,13 @@ function clearCart() {
 
 function renderCart() {               
     container_cart.innerHTML = '';
-    const carritoSinDuplicados = [...new Set(carrito)];
+    const reset_cart = [...new Set(carrito)];
     cont_products.textContent = carrito.length;
-    carritoSinDuplicados.forEach((item) => {
+    reset_cart.forEach((item) => {
 
-        const miItem = products.filter((itemBaseDatos) => {                        
-            return itemBaseDatos.id === parseInt(item);
-        });
-        const numeroUnidadesItem = carrito.reduce((total, itemId) => {                
-            return itemId === item ? total += 1 : total;
-        }, 0);
+        const items = products.filter((item_products) => {                        
+            return item_products.id === parseInt(item);
+        });    
 
         const card_product = document.createElement('div');
         const image_prduct = document.createElement('img');
@@ -100,12 +97,12 @@ function renderCart() {
         btn_remove.classList.add('btn_remove');
         btn_add.classList.add('btn_add');
         btn_remove_product.classList.add('btn_remove_element')
-        image_prduct.setAttribute('src', miItem[0].image);
-        name.textContent = miItem[0].name;
-        price.textContent = miItem[0].price;
-        cuanty.textContent = numeroUnidadesItem;
+        image_prduct.setAttribute('src', items[0].image);
+        name.textContent = items[0].name;
+        price.textContent = items[0].price;
+        cuanty.textContent = carrito.length;
         btn_add.textContent = '+';
-        btn_add.setAttribute('marcador', miItem[0].id);
+        btn_add.setAttribute('marcador', items[0].id);
         btn_remove.textContent = '-';
         btn_remove_product.textContent = 'X';
 
