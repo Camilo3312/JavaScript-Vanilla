@@ -27,6 +27,7 @@ const products = [
 ];
 
 let carrito = [];
+
 const container = document.querySelector('.container_prducts');
 const container_cart = document.querySelector('.container_cart');
 const cont_products = document.querySelector('.cont');
@@ -77,18 +78,23 @@ function clearCart() {
 function renderCart() {               
     container_cart.innerHTML = '';
     const reset_cart = [...new Set(carrito)];
-    cont_products.textContent = carrito.length;
+    cont_products.textContent = reset_cart.length;
+
+
     reset_cart.forEach((item) => {
 
         const items = products.filter((item_products) => {                        
             return item_products.id === parseInt(item);
         });
 
-        const num_products = carrito.reduce((total, id_product) => {                
-            return id_product === item ? total += 1 : total;
-        }, 0);  
 
-        console.log(num_products);
+        const num_products = carrito.reduce((total, id_product) => {                
+            return id_product === item ? 
+            total += 1 
+            : 
+            total;
+        }, 0);
+
         const card_product = document.createElement('div');
         const image_prduct = document.createElement('img');
         const name = document.createElement('p');
