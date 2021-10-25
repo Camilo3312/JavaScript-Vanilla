@@ -30,7 +30,7 @@ header {
 .container_cart {
     display: none;
     padding: 20px;
-    border: 1px solid #a2fd87;
+    border: 1px solid var(--color-primary);
     background: #dffdd6;
     border-radius: 5px;
 
@@ -53,33 +53,36 @@ header {
     width: 100%;
     padding: 10px;
     font-size: 20px;
-    background: #6bb454;
+    background: #196d00;
     color: #ffffff;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn_add {
     padding: 5px 10px;
     font-size: 20px;
-    background: #6bb454;
+    background: var(--color-primary);
     color: #ffffff;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn_remove {
-    padding: 5px 10px;
+    padding: 0.35rem 1rem;
     font-size: 20px;
-    background: #6bb454;
+    background: #d82a0c;
     color: #ffffff;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn_remove_element {
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: 1rem;
     background: #972323;
     color: #ffffff;
     border: none;
@@ -94,8 +97,6 @@ header {
 .container_prducts {
     max-width: 1200px;
     margin: 3em auto;
-
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -125,11 +126,18 @@ header {
 .btn_add_cart {
     width: 100%;
     padding: 10px;
-    background: #6bb454;
+    background: var(--color-primary);
     color: #FFFF;
     border: none;
     border-radius: 5px;
     font-size: 25px;
+    cursor: pointer;
+}
+
+.btn_add_cart:hover,
+.btn_add_cart:focus{
+    background: #228603;
+    box-shadow: 0 0 20px #35d404;
 }
 
 .cont {
