@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner {
+    height: 250px;
+    background-image: url('https://assets.tonica.la/__export/1525982514505/sites/debate/img/2018/05/10/predador_1_1.jpg_673822677.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.info_banner {
+    height: 100%;
+    backdrop-filter: blur(2px);
+    /* background: rgba(0,0,0,.5); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_banner {
+    font-size: 4em;
+    color: #141414;
+    /* color: #FFFF; */
+}
+
+.container_select {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.select_characters {
+    padding: 10px 20px;
+    border: none;
+    background: #e6e6e6;
+    font-size: 20px;
+}
+
+.container_cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.name {
+    padding: 20px;
+    background: #f3f3f3;
+    font-size: 20px;
+    color: #303030;
+    text-align: center;
+}
